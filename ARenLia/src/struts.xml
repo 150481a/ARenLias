@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+     <constant name="struts.devMode" value="true" />
+     <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+     <package name="AR"  extends="struts-default">
+        <action name="login" class="com.oaec.ssh.action.LoginUsersAction">
+            <result name="success">/index.jsp </result>
+            <result name="input"> /login.jsp </result>
+        </action>
+        <action name="renyuanzj_add" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_add">
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/addrenyuanzj.jsp</result>
+        </action>
+        <action name="renyuanzj_pag" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_pag">
+            <result name="success">/files/listrenwu.jsp</result>
+        </action>
+        <action name="renyuanzj_See" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_See">
+            <result name="success">/files/listrenwumingxi.jsp</result>
+        </action>
+        <action name="renyuanzj_edit" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_edit">
+             <result name="success">/files/editrenwumingxi.jsp</result>
+        </action>
+        <action name="renyuanzj_edits" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_edits">
+             <result name="success">/files/mainfra.jsp</result>
+             <result name="input">/files/editrenwumingxi.jsp</result>
+        </action>
+        <action name="renyuanzj_delete" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_delete">
+             <result name="success">/files/mainfra.jsp</result>
+        </action>
+         <action name="renyuanzj_deletes" class="com.oaec.ssh.action.LoginUsersAction" method="renyuanzj_deletes">
+             <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="Message_add" class="com.oaec.ssh.action.MessageAction">
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/sendxiaoxi.jsp</result>
+        </action>
+        <action name="Message_list" class="com.oaec.ssh.action.MessageAction" method="Message_list">
+            <result name="success">/files/listxiaoxi.jsp</result>
+        </action>
+        <action name="Message_query" class="com.oaec.ssh.action.MessageAction" method="Message_query">
+            <result name="success">/files/sendxiaoximingxi.jsp</result>
+        </action>
+        <action name="Message_delete" class="com.oaec.ssh.action.MessageAction" method="Message_delete">
+             <result name="success">/files/mainfra.jsp</result>
+        </action>
+         <action name="Message_deletes" class="com.oaec.ssh.action.MessageAction" method="Message_deletes">
+             <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="Message_send" class="com.oaec.ssh.action.MessageAction" method="Message_send">
+            <result name="success">/files/listsendxiaoxi.jsp</result>
+        </action>
+        <action name="Message_take" class="com.oaec.ssh.action.MessageAction" method="Message_take">
+            <result name="success">/files/listtakexiaoxi.jsp</result>
+        </action>
+        <action name="joblist_add" class="com.oaec.ssh.action.JobAction" method="joblist_add">
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/addjihua.jsp</result>
+        </action>
+        <action name="joblist_list" class="com.oaec.ssh.action.JobAction" method="joblist_list">
+            <result name="success">/files/listxiangmuxinxi.jsp</result>
+        </action>
+        <action name="joblist_rc" class="com.oaec.ssh.action.JobAction" method="joblist_rc">
+            <result name="success">/files/listxuqiu.jsp</result>
+        </action>
+        <action name="joblist_query" class="com.oaec.ssh.action.JobAction" method="joblist_query">
+            <result name="success">/files/queryyuanxinxi.jsp</result>
+        </action>
+        <action name="joblist_edit" class="com.oaec.ssh.action.JobAction" method="joblist_edit">
+            <result name="success">/files/editxiangmu.jsp</result>
+        </action>
+        <action name="joblist_edits" class="com.oaec.ssh.action.JobAction" method="joblist_edits">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="joblist_delete" class="com.oaec.ssh.action.JobAction" method="joblist_delete">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+         <action name="joblist_deletes" class="com.oaec.ssh.action.JobAction" method="joblist_deletes">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="educatelist_ck" class="com.oaec.ssh.action.EducateAction" method="educatelist_ck">
+            <result name="success">/files/listgerenrenwu.jsp</result>
+        </action>
+        <action name="educatelist_add" class="com.oaec.ssh.action.EducateAction" method="educatelist_add">
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/addgerenxinxi.jsp</result>
+        </action>
+         <action name="educatelist_edit" class="com.oaec.ssh.action.EducateAction" method="educatelist_edit">
+            <result name="success">/files/edittrenwumingxi.jsp</result>
+        </action>
+        <action name="educatelist_edits" class="com.oaec.ssh.action.EducateAction" method="educatelist_edits">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="educatelist_query" class="com.oaec.ssh.action.EducateAction" method="educatelist_query">
+            <result name="success">/files/querytrenwumingxi.jsp</result>
+        </action>
+        <action name="educatelist_delete" class="com.oaec.ssh.action.EducateAction" method="educatelist_delete">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="educatelist_deletes" class="com.oaec.ssh.action.EducateAction" method="educatelist_deletes">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        
+        <action name="stipendlist_add" class="com.oaec.ssh.action.StipendAction" method="stipendlist_add" >
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/addregister.jsp</result>
+        </action>
+        <action name="stipendlist_ck" class="com.oaec.ssh.action.StipendAction" method="stipendlist_ck" >
+            <result name="success">/files/listregister.jsp</result>
+        </action>
+         <action name="stipendlist_edit" class="com.oaec.ssh.action.StipendAction" method="stipendlist_edit">
+            <result name="success">/files/editxiangmumingxi.jsp</result>
+        </action>
+        <action name="stipendlist_edits" class="com.oaec.ssh.action.StipendAction" method="stipendlist_edits">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="stipendlist_query" class="com.oaec.ssh.action.StipendAction" method="stipendlist_query">
+            <result name="success">/files/listxiangmumingxi.jsp</result>
+        </action>
+        <action name="stipendlist_delete" class="com.oaec.ssh.action.StipendAction" method="stipendlist_delete">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="stipendlist_deletes" class="com.oaec.ssh.action.StipendAction" method="stipendlist_deletes">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        
+        <action name="institutionlist_add" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_add" >
+            <result name="success">/files/mainfra.jsp</result>
+            <result name="input">/files/addGongZiType.jsp</result>
+        </action>
+        <action name="institutionlist_ck" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_ck" >
+            <result name="success">/files/listMonthYuanGongGongZi.jsp</result>
+        </action>
+        <action name="institutionlist_query" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_query">
+            <result name="success">/files/queryMonthYuanGongGongZi.jsp</result>
+        </action>
+        <action name="institutionlist_edit" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_edit">
+            <result name="success">/files/editMonthYuanGongGongZi.jsp</result>
+        </action>
+        <action name="institutionlist_edits" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_edits">
+            <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="institutionlist_deletes" class="com.oaec.ssh.action.InstitutionAction" method="institutionlist_deletes">
+             <result name="success">/files/mainfra.jsp</result>
+        </action>
+        <action name="*">
+			<result>/files/{1}.jsp</result>
+		</action>
+     </package>
+   
+</struts>
